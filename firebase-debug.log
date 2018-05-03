@@ -1,0 +1,54 @@
+[debug] [2018-05-02T22:31:45.825Z] ----------------------------------------------------------------------
+[debug] [2018-05-02T22:31:45.829Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-05-02T22:31:45.830Z] CLI Version:   3.18.4
+[debug] [2018-05-02T22:31:45.830Z] Platform:      darwin
+[debug] [2018-05-02T22:31:45.830Z] Node Version:  v6.11.0
+[debug] [2018-05-02T22:31:45.831Z] Time:          Wed May 02 2018 18:31:45 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:45.831Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-05-02T22:31:45.852Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-05-02T22:31:45.852Z] > authorizing via signed-in user
+[debug] [2018-05-02T22:31:45.856Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-05-02T22:31:45.857Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/cgrgxk6-e7-dHnLGUGWX5prsebz-dGQ7YA_As5sl4_I',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed May 02 2018 18:31:45 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:46.261Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-02T22:31:46.302Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pickup-34815  
+  
+ Wed May 02 2018 18:31:46 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:46.798Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-02T22:31:46.800Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pickup-34815/tokens  
+  
+ Wed May 02 2018 18:31:46 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:47.168Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-02T22:31:47.170Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pickup-34815  
+  
+ Wed May 02 2018 18:31:47 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:47.578Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/AayushManocha/Developer/react-webapp'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-05-02T22:31:49.129Z] Fetching environment
+[debug] [2018-05-02T22:31:49.132Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638:getServerAppConfig  
+  
+ Wed May 02 2018 18:31:49 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:49.133Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Wed May 02 2018 18:31:49 GMT-0400 (EDT)
+[debug] [2018-05-02T22:31:49.667Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-05-02T22:31:50.162Z] <<< HTTP RESPONSE 200
+[debug] [2018-05-02T22:31:50.162Z] Starting @google-cloud/functions-emulator
+[warn] ⚠  functions: Error from emulator. Error: Emulator crashed! Check the log file...
+[debug] [2018-05-02T22:31:50.276Z] Error: Emulator crashed! Check the log file...
+    at ChildProcess.child.on (/usr/local/lib/node_modules/firebase-tools/node_modules/@google-cloud/functions-emulator/src/cli/controller.js:650:24)
+    at emitTwo (events.js:106:13)
+    at ChildProcess.emit (events.js:191:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:215:12)
