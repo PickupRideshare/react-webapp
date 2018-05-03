@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import firebase from 'firebase';
+import {auth} from '../fire';
 import './css/index.css';
 
 class SigninPage extends Component{
@@ -25,8 +25,8 @@ class SigninPage extends Component{
   }
 
   createAccount() {
-    if(this.state.password == this.state.passwordConfirm) {
-      firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
+    if(this.state.password === this.state.passwordConfirm) {
+      auth.createUserWithEmailAndPassword(this.state.email, this.state.password);
     }
   }
 

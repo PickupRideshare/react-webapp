@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import {auth} from '../fire';
 import React, {Component} from 'react';
 import './css/index.css';
 
@@ -26,7 +26,7 @@ class LoginPage extends Component{
   onSubmit() {
     console.log(this.state.email);
     console.log(this.state.password);
-    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
+    auth.signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
         console.log(e);
     }).then(() => {
       console.log("Signed in!");
