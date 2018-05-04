@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import firebase from 'firebase';
 import 'firebase/firestore';
 import './css/index.css';
+import { Switch, Route, Link } from 'react-router-dom'
 
 class SigninPage extends Component{
   constructor(props) {
@@ -36,7 +37,51 @@ class SigninPage extends Component{
 render(){
   return(
 
-  <div className="App">
+    <div className="App">
+
+
+  <nav
+            class="navbar navbar-fixed-top
+            navbar-default"
+            role="navigation"
+            >
+            
+            <div class="container">
+
+
+            <div class="navbar-header">
+            <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar_collapse">
+            </button>
+            </div>
+
+
+            <div
+            class="collapse navbar-collapse"
+            id="navbar_collapse">
+            <ul class="nav navbar-nav navbar-right">
+            
+            
+            
+      
+        
+            <li>
+            <a >
+            <Link to="/">Go Home</Link>
+            </a>
+            </li>
+
+
+            </ul>
+            </div>
+            </div>
+            </nav>
+            
+
+  
       <div className="feature-block black-bg">
         <div className="container">
             <div className="row text-center">

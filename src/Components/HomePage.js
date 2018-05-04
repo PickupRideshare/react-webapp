@@ -2,9 +2,9 @@
 * React component for the landing page.
 */
 import React, { Component, PropTypes } from 'react';
-import { browserHistory, Link } from 'react-router';
+import { browserHistory} from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import LoginPage from './LoginPage';
 import SigninPage from './SigninPage';
@@ -76,6 +76,18 @@ class Homepage extends Component {
             Contact Us
             </a>
             </li>
+
+            <li>
+            <a >
+           <Link to="/signup"> Sign up </Link>
+            </a>
+            </li>
+
+            <li>
+            <a >
+            <Link to="/login" > Log In </Link>
+            </ a>
+            </li>
             
            
             
@@ -83,6 +95,8 @@ class Homepage extends Component {
             </div>
             </div>
             </nav>
+            
+
 
             <div class="navbar-placeholder">
             <div id="content">
@@ -282,6 +296,7 @@ class Homepage extends Component {
 
 
 		</div>
+    
 
 
 	);

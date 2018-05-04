@@ -1,9 +1,9 @@
 import firebase from 'firebase';
 import './css/index.css';
 import React, { Component, PropTypes } from 'react';
-import { browserHistory, Link } from 'react-router';
+import { browserHistory} from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route,  Link  } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import SigninPage from './SigninPage';
 
@@ -44,6 +44,47 @@ class LoginPage extends Component{
   return(
 
   <div className="App">
+
+
+  <nav
+            class="navbar navbar-fixed-top
+            navbar-default"
+            role="navigation"
+            >
+            
+            <div class="container">
+
+
+            <div class="navbar-header">
+            <button
+            type="button"
+            class="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar_collapse">
+            </button>
+            </div>
+
+
+            <div
+            class="collapse navbar-collapse"
+            id="navbar_collapse">
+            <ul class="nav navbar-nav navbar-right">
+            
+            
+            
+      
+        
+            <li>
+            <a >
+           <Link to="/"> Go Home </Link>
+            </a>
+            </li>
+
+
+            </ul>
+            </div>
+            </div>
+            </nav>
     
     <div className="feature-block black-bg">
       <div className="container">
