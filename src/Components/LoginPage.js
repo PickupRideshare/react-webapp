@@ -1,4 +1,4 @@
-import {auth} from '../fire';
+import firebase from 'firebase';
 import React, {Component} from 'react';
 import './css/index.css';
 
@@ -13,6 +13,7 @@ class LoginPage extends Component{
     this.render = this.render.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+
   }
 
   onChange(e) {
@@ -26,7 +27,7 @@ class LoginPage extends Component{
   onSubmit() {
     console.log(this.state.email);
     console.log(this.state.password);
-    auth.signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
+    this.props.firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
         console.log(e);
     }).then(() => {
       console.log("Signed in!");
@@ -68,9 +69,7 @@ class LoginPage extends Component{
                */}
               
         
-              <form onSubmit={this.onSubmit}>
-                  <input type="submit" value="Submit" />
-               </form>
+              <button onClick={this.onSubmit}>Sign in</button>
           
           
           

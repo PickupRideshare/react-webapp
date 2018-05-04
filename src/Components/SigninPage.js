@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {auth} from '../fire';
+import firebase from 'firebase';
+import 'firebase/firestore';
 import './css/index.css';
 
 class SigninPage extends Component{
@@ -14,6 +15,8 @@ class SigninPage extends Component{
     this.render = this.render.bind(this);
     this.onChange = this.onChange.bind(this);
     this.createAccount = this.createAccount.bind(this);
+
+
   }
 
   onChange(e) {
@@ -26,7 +29,7 @@ class SigninPage extends Component{
 
   createAccount() {
     if(this.state.password === this.state.passwordConfirm) {
-      auth.createUserWithEmailAndPassword(this.state.email, this.state.password);
+      this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
     }
   }
 
@@ -64,9 +67,7 @@ render(){
                 
                 
           
-                <form onSubmit={this.createAccount}>
-                    <input type="submit" value="Submit" />
-                        </form>
+            <button onClick={this.createAccount}>Create Account</button>
             
             
             
