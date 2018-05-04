@@ -4,7 +4,7 @@
 import React, { Component, PropTypes } from 'react';
 import { browserHistory, Link } from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
-import RideDriveForm from './RideDriveForm';
+
 /*import assets here*/
 
 class Homepage extends Component {
@@ -164,8 +164,95 @@ class Homepage extends Component {
             
             <div class="row text-center">
 
-            <RideDriveForm/>
-            
+
+            <div class="form-group">
+            <label for="RiderForm1">First name:</label>
+            <input type="firstname" class="form-control" id="RiderForm1" placeholder="e.g. John"/>
+            </div>
+
+
+            <div class="form-group">
+            <label for="RiderForm2">Last name:</label>
+            <input type="lastname" class="form-control" id="RiderForm2" placeholder="e.g. Doe"/>
+            </div>
+
+
+
+            <div class="form-group">
+            <label for="RiderForm3">Email address:</label>
+            <input type="email" class="form-control" id="RiderForm3" placeholder="name@example.com"/>
+            </div>
+
+
+            <div class="form-group">
+            <label for="RiderForm4">Phone number:</label>
+            <input type="PhoneNumber" class="form-control" id="RiderForm4"/>
+            </div>
+
+
+            <div class="form-group">
+            <label for="RiderForm5">Starting From:</label>
+            <select class="form-control" id="RiderForm5">
+                  <option>McMaster University</option>
+                  <option>Richmond Hill</option>
+                  <option>Oakville</option>
+                  <option>Square One</option>
+                  <option>North York</option>
+                  <option>Georgetown</option>
+                  <option>Milton</option>
+                  <option>Markham</option>
+                  <option>Scarborough</option>
+                  <option>Thornhill</option>
+                  <option>Etobicoke</option>
+                  <option>Toronto (DT)</option>
+                  <option>St. Catharines</option>
+                  <option>London</option>
+                  <option>Kitchener</option>
+            </select>
+            </div>
+
+
+            <div class="form-group">
+            <label for="RiderForm6">Destination:</label>
+            <select class="form-control" id="RiderForm6">
+                  <option>McMaster University</option>
+                  <option>Richmond Hill</option>
+                  <option>Oakville</option>
+                  <option>Square One</option>
+                  <option>North York</option>
+                  <option>Georgetown</option>
+                  <option>Milton</option>
+                  <option>Markham</option>
+                  <option>Scarborough</option>
+                  <option>Thornhill</option>
+                  <option>Etobicoke</option>
+                  <option>Toronto (DT)</option>
+                  <option>St. Catharines</option>
+                  <option>London</option>
+                  <option>Kitchener</option>
+            </select>
+            </div>
+
+
+            <div class="form-check">
+            <input class="form-check-input" name="radio" type="radio" id="Radios1" value="option1" checked/>
+            <label class="form-check-label" for="Radios1">
+                I am a rider
+            </label>
+            </div>
+
+
+            <div class="form-check">
+            <input class="form-check-input" name="radio" type="radio" id="Radios2" value="option2"/>
+            <label class="form-check-label" for="Radios2">
+                I am a driver
+            </label>
+            </div>
+
+            <form action="/action_page.php">
+            <button type="submit" class="btn btn-light">Submit</button>
+            </form>
+
             <div class="feature-block text-center">
             <div class="container">
             <h2 class="feature-header">
