@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import HomePage from './Components/HomePage';
-import LoginPage from './Components/LoginPage.js';
-import SigninPage from './Components/SigninPage.js';
+import LoginPage from './Components/LoginPage';
+import SigninPage from './Components/SigninPage';
 import RideDriveForm from './Components/RideDriveForm';
+import Main from '.Components/HomePage';
 import logo from './logo.svg';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
@@ -20,6 +21,7 @@ class App extends Component {
     return (
       <div>
         <HomePage/>
+        <Main/>
       </div>
     );
   }
