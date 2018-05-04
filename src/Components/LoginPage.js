@@ -1,5 +1,4 @@
 import firebase from 'firebase';
-import React, {Component} from 'react';
 import './css/index.css';
 import React, { Component, PropTypes } from 'react';
 import { browserHistory, Link } from 'react-router';
