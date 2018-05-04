@@ -6,6 +6,10 @@ import SigninPage from './Components/SigninPage';
 import RideDriveForm from './Components/RideDriveForm';
 import logo from './logo.svg';
 import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+
+
 
 class App extends Component {
   constructor(props){

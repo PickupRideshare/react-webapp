@@ -4,8 +4,11 @@
 import React, { Component, PropTypes } from 'react';
 import { browserHistory, Link } from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
+import { Switch, Route } from 'react-router-dom'
+
 
 /*import assets here*/
+
 
 class Homepage extends Component {
 	constructor(props) {
@@ -64,7 +67,7 @@ class Homepage extends Component {
             
             
             <li>
-            <a href = "login.html">Log In</a>
+            <Link to='/LoginPage'>Log In</Link>
             </li>
             
             
@@ -77,7 +80,7 @@ class Homepage extends Component {
             
             
             <li>
-            <a href="SignUp.html">Sign Up</a>
+            <Link to='/SignInPage'>Sign Up</Link>
             </li>
             
             </ul>
