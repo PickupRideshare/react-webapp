@@ -5,22 +5,10 @@ import React, { Component, PropTypes } from 'react';
 import { browserHistory, Link } from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
 import { Switch, Route } from 'react-router-dom'
-import { HashRouter } from 'react-router-dom'
-import LoginPage from './Components/LoginPage';
-import SigninPage from './Components/SigninPage';
 
 
 /*import assets here*/
 
-
-const Main = () => (
-  <main>
-    <Switch>
-      <Route path='/SigninPage' component={SigninPage}/>
-      <Route path='/LoginPage' component={LoginPage}/>
-    </Switch>
-  </main>
-)
 
 
 class Homepage extends Component {
@@ -79,7 +67,11 @@ class Homepage extends Component {
             
             
             
-      
+            <li>
+            <Link to='/LoginPage'>Log In</Link>
+            </li>
+            
+            
         
             <li>
             <a >
@@ -87,7 +79,10 @@ class Homepage extends Component {
             </a>
             </li>
             
-           
+            
+            <li>
+            <Link to='/SigninPage'>Sign Up</Link>
+            </li>
             
             </ul>
             </div>

@@ -18,10 +18,14 @@ class App extends Component {
     super(props);
   }
   render() {
+
     return (
       <div>
-        <HomePage/>
-        <Main/>
+        <Switch>
+          <Route path='/' component={HomePage}/> 
+          <Route path='/SigninPage' component={SigninPage}/>
+          <Route path='/LoginPage' component={LoginPage}/>
+        </Switch>
       </div>
     );
   }
