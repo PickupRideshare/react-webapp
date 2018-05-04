@@ -5,6 +5,9 @@ import React, { Component, PropTypes } from 'react';
 import { browserHistory, Link } from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
 import { Switch, Route } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
+import LoginPage from './Components/LoginPage.js';
+import SigninPage from './Components/SigninPage.js';
 
 
 /*import assets here*/
