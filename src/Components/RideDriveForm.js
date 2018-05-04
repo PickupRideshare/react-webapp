@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import {firestore} from '../fire';
+import firebase from '../fire';
 
 class RideDriveForm extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class RideDriveForm extends Component {
 
   submitRide() {
     console.log(this.state.destinationCity + this.state.riderName + this.state.startingCity);
-    firestore.collection("Rides").add({
+    firebase.firestore().collection("Rides").add({
       destination_city: this.state.destinationCity,
       matched: false,
       rider_name: this.state.riderName,
@@ -51,9 +51,7 @@ class RideDriveForm extends Component {
         <h1>Rider Name</h1>
         <input type="text" name="riderName" value={this.state.riderName} onChange={this.onChange} /><br /><br /> 
 
-        <form onSubmit={this.submitRide}>
-          <input type="submit" />
-        </form>
+       <button onClick={this.submitRide}>Submit</button>
       </div>
 
       
