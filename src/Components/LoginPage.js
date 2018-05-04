@@ -5,7 +5,7 @@ import { browserHistory, Link } from 'react-router';
 import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Table, HelpBlock, Glyphicon } from 'react-bootstrap';
 import { Switch, Route } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
-import SigninPage from './Components/SigninPage';
+import SigninPage from './SigninPage';
 
 
 class LoginPage extends Component{

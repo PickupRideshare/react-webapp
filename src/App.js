@@ -4,11 +4,10 @@ import HomePage from './Components/HomePage';
 import LoginPage from './Components/LoginPage';
 import SigninPage from './Components/SigninPage';
 import RideDriveForm from './Components/RideDriveForm';
-import Main from '.Components/HomePage';
 import logo from './logo.svg';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, BrowserRouter } from 'react-router-dom';
 
 
 
@@ -19,10 +18,14 @@ class App extends Component {
   }
   render() {
     return (
+      <BrowserRouter>
       <div>
-        <HomePage/>
-        <Main/>
-      </div>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/signup" component={SigninPage} />
+
+        </div>
+      </BrowserRouter>
     );
   }
 }
