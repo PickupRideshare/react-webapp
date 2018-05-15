@@ -8,7 +8,8 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import LoginPage from './LoginPage';
 import SigninPage from './SigninPage';
-
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
 
 /*import assets here*/
 
@@ -179,32 +180,32 @@ class Homepage extends Component {
 
 
             <div class="form-group">
-            <label for="RiderForm1">First name:</label>
+            <label for="RiderForm1">First name: </label>
             <input type="firstname" class="form-control" id="RiderForm1" placeholder="e.g. John"/>
             </div>
 
 
             <div class="form-group">
-            <label for="RiderForm2">Last name:</label>
+            <label for="RiderForm2">Last name: </label>
             <input type="lastname" class="form-control" id="RiderForm2" placeholder="e.g. Doe"/>
             </div>
 
 
 
             <div class="form-group">
-            <label for="RiderForm3">Email address:</label>
+            <label for="RiderForm3">Email address: </label>
             <input type="email" class="form-control" id="RiderForm3" placeholder="name@example.com"/>
             </div>
 
 
             <div class="form-group">
-            <label for="RiderForm4">Phone number:</label>
+            <label for="RiderForm4">Phone number: </label>
             <input type="PhoneNumber" class="form-control" id="RiderForm4"/>
             </div>
 
 
             <div class="form-group">
-            <label for="RiderForm5">Starting From:</label>
+            <label for="RiderForm5">Starting From: </label>
             <select class="form-control" id="RiderForm5">
                   <option>McMaster University</option>
                   <option>Richmond Hill</option>
@@ -226,7 +227,7 @@ class Homepage extends Component {
 
 
             <div class="form-group">
-            <label for="RiderForm6">Destination:</label>
+            <label for="RiderForm6">Destination: </label>
             <select class="form-control" id="RiderForm6">
                   <option>McMaster University</option>
                   <option>Richmond Hill</option>
@@ -244,6 +245,14 @@ class Homepage extends Component {
                   <option>London</option>
                   <option>Kitchener</option>
             </select>
+            </div>
+            <div>
+            {this.state.selectedDay && <p>Day: {this.state.selectedDay.toLocaleDateString()}</p>}
+            {!this.state.selectedDay && <p>Choose a day</p>}
+            <DayPickerInput 
+                  onDayChange={this.handleDayChange}
+                  dayPickerProps={{todayButton: 'Today'}}     
+            />
             </div>
 
 
