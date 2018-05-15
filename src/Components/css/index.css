@@ -874,6 +874,9 @@ dd {
 .white-text {
   color: #fff;
 }
+.black-text{
+  color: #000;
+}
 .form-group {
   margin: 15px;
 }

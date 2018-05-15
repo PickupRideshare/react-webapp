@@ -341,10 +341,12 @@ class Homepage extends Component {
             <div>
             {this.state.selectedDay && <p>Day: {this.state.selectedDay.toLocaleDateString()}</p>}
             {!this.state.selectedDay && <p>Choose a day</p>}
+            <div className='black-text'>
             <DayPickerInput 
                   onDayChange={this.handleDayChange}
                   dayPickerProps={{todayButton: 'Today'}}   
             />
+            </div>
             </div>
             </FormGroup>
 
