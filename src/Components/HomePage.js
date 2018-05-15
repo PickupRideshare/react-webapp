@@ -32,9 +32,9 @@ class Homepage extends Component {
 
 		/*this.myFunction = this.myFunction.bind(this);*/
     this.handleFirstnameChange = this.handleFirstnameChange.bind(this);
-    this.handleLastnameChange = this.handleFirstnameChange.bind(this);
-    this.handleEmailChange = this.handleFirstnameChange.bind(this);
-    this.handlePhoneChange = this.handleFirstnameChange.bind(this);
+    this.handleLastnameChange = this.handleLastnameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePhoneChange = this.handlePhoneChange.bind(this);
 	}
 	
 	componentDidMount() {
@@ -64,7 +64,7 @@ class Homepage extends Component {
 
   handlePhoneChange(e) {
     this.setState({
-      firstname: e.target.value,
+      phone: e.target.value,
       error: null,
     });
   }

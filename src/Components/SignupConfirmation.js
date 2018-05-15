@@ -16,7 +16,7 @@ class SignupConfirmation extends Component {
 					<Modal.Title>Thank you for signing up!</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
-				  <img src='/public/favicon.ico' alt='PickUp' style={{height:'100px'}}/>
+				  <img src='/img/pickupmodal.png' alt='PickUp' style={{height:'100px'}}/>
 				  <p>Welcome to the PickUp family! You are now able to search for rides with your information saved.</p>
 				</Modal.Body>
 				<Modal.Footer>
