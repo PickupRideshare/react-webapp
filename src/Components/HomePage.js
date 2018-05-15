@@ -71,28 +71,33 @@ class Homepage extends Component {
 
 	render() {
 		return(
-			// <div>
-			// 	<Navbar collapseOnSelect={true}>
-			// 		<Navbar.Header className ="text-center">
-			// 			<span>PickUp</span>
-			// 		</Navbar.Header>
-			// 	</Navbar>
-      // </div>
+			/*<Navbar collapseOnSelect={true}>
+        <Navbar.Header className="text-center">
+          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsStyle="primary" bsSize="small">Contact Us</Button>
+        {!this.state.isLoggedIn &&
+          <div>
+              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsStyle="primary" bsSize="small">SIGN IN</Button>
+              <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}} onClick={this.openSignUp}>SIGN UP</Button>
+          </div>
+        }
+        </Navbar.Header>
+      </Navbar>
+      */
       <div className="App">
 
         <nav
-            class="navbar navbar-fixed-top
+            className="navbar navbar-fixed-top
             navbar-default"
             role="navigation"
             >
             
-            <div class="container">
+            <div className="container">
 
 
-            <div class="navbar-header">
+            <div className="navbar-header">
             <button
             type="button"
-            class="navbar-toggle collapsed"
+            className="navbar-toggle collapsed"
             data-toggle="collapse"
             data-target="#navbar_collapse">
             </button>
@@ -100,30 +105,24 @@ class Homepage extends Component {
 
 
             <div
-            class="collapse navbar-collapse"
+            className="collapse navbar-collapse"
             id="navbar_collapse">
-            <ul class="nav navbar-nav navbar-right">
+            <ul className="nav navbar-nav navbar-right">
             
             
             
       
         
             <li>
-            <a >
-            Contact Us
-            </a>
+            <Link to='/'>Contact Us</Link>
+            </li>
+
+            <li>         
+            <Link to="/signup"> Sign up </Link>
             </li>
 
             <li>
-            <a >
-           <Link to="/signup"> Sign up </Link>
-            </a>
-            </li>
-
-            <li>
-            <a >
             <Link to="/login" > Log In </Link>
-            </ a>
             </li>
             
            
@@ -135,10 +134,10 @@ class Homepage extends Component {
             
 
 
-            <div class="navbar-placeholder">
+            <div className="navbar-placeholder">
             <div id="content">
-            <div class="mtl mbl lead">
-            <div class="animation-container">
+            <div className="mtl mbl lead">
+            <div className="animation-container">
             <img
             alt="PickUp Banner"
             id="banner"
@@ -149,12 +148,13 @@ class Homepage extends Component {
             </div>
             </div>
             </div>
-            <div class="feature-block">
-            <div class="container">
-            <div class="row text-center">
-            <div class="col-md-10 col-md-offset-1">
+            <div className="feature-block">
+            <div className="container">
+            <div className="row text-center">
+            <div className="col-md-10 col-md-offset-1">
 
-            <h2 class="feature-header">
+
+            <h2 className="feature-header">
             <br /><br />
 
             <br /><br />
@@ -165,9 +165,9 @@ class Homepage extends Component {
             </h2>
             </div>
             </div>
-            <div class="row mtl">
-            <div class="col-md-4 col-md-push-6 lead mbl">
-            <p class="mts">
+            <div className="row mtl">
+            <div className="col-md-4 col-md-push-6 lead mbl">
+            <p className="mts">
             <br /><br />Pickup is a ridesharing service designed to simplify the commute of university students around Ontario and provide the best commuting experience.<br /><br /><br />
             
             Our app is currently in development and will be released in time for early September.<br /><br />
@@ -177,19 +177,19 @@ class Homepage extends Component {
             </p>
             <p>
             </p>
-            <div class="learn-more-button-wrapper mtm">
+            <div className="learn-more-button-wrapper mtm">
             <a
-            class="btn btn-default btn-bordered"
+            className="btn btn-default btn-bordered"
             target="_blank"
             >
             Sign up to become a driver
             </a>
             </div>
             </div>
-            <div class="col-md-5 col-md-pull-3 mts text-center">
+            <div className="col-md-5 col-md-pull-3 mts text-center">
             
             
-            <div class="animation-container">
+            <div className="animation-container">
             <div id="animation-container">
             <br />
             <br />
@@ -200,11 +200,11 @@ class Homepage extends Component {
             </div>
             </div>
             </div>
-            <div class="feature-block black-bg">
-            <div class="container">
-            <div class="row text-center">
-            <div class="col-md-8 col-md-offset-2">
-            <h2 class="feature-header mtl">
+            <div className="feature-block black-bg">
+            <div className="container">
+            <div className="row text-center">
+            <div className="col-md-8 col-md-offset-2">
+            <h2 className="feature-header mtl">
             Get A Ride Today <br /> Please Fill Out The Following Form And Select Rider Or Driver<br />
             <br />
             Info:
@@ -351,17 +351,17 @@ class Homepage extends Component {
             <Button type="submit" bsStyle="primary">Submit</Button>
             </Form>
 
-            <div class="feature-block text-center">
-            <div class="container">
-            <h2 class="feature-header">
+            <div className="feature-block text-center">
+            <div className="container">
+            <h2 className="feature-header">
             Contact Us:
             </h2>
             
-            <div class="row mtx mbx">
-            <div class="col-md-10 col-md-offset-1">
+            <div className="row mtx mbx">
+            <div className="col-md-10 col-md-offset-1">
           
 
-            <div class="lead">
+            <div className="lead">
             
             pickuprideshare@gmail.com<br />
             

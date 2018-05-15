@@ -116,7 +116,7 @@ class LoginPage extends Component{
                */}
               
         
-              <button onClick={this.onSubmit}>Sign in</button>
+              <Button onClick={this.onSubmit}>Sign in</Button>
           
           
           
