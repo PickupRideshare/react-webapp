@@ -11,6 +11,7 @@ class SigninPage extends Component{
       email: '',
       password: '',
       passwordConfirm: '',
+      showConfirmation: false,
     }
 
     this.render = this.render.bind(this);
@@ -31,6 +32,9 @@ class SigninPage extends Component{
   createAccount() {
     if(this.state.password === this.state.passwordConfirm) {
       this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
+      this.setState({
+        showConfirmation: true
+      });
     }
   }
 
