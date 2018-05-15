@@ -28,6 +28,7 @@ class Homepage extends Component {
 			lastNameValid: null,
 			emailValid: null,
 			phoneValid: null,
+      selectedDay: undefined,
 		}
 
 		/*this.myFunction = this.myFunction.bind(this);*/
@@ -35,6 +36,7 @@ class Homepage extends Component {
     this.handleLastnameChange = this.handleLastnameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
+    this.handleDayChange = this.handleDayChange.bind(this);
 	}
 	
 	componentDidMount() {
@@ -66,6 +68,12 @@ class Homepage extends Component {
     this.setState({
       phone: e.target.value,
       error: null,
+    });
+  }
+
+  handleDayChange(day) {
+    this.setState({ 
+      selectedDay: day 
     });
   }
 
@@ -328,14 +336,17 @@ class Homepage extends Component {
               </FormControl>
               </Col>
             </FormGroup>
+
+            <FormGroup controlId="formControlsInput">
             <div>
             {this.state.selectedDay && <p>Day: {this.state.selectedDay.toLocaleDateString()}</p>}
             {!this.state.selectedDay && <p>Choose a day</p>}
             <DayPickerInput 
                   onDayChange={this.handleDayChange}
-                  dayPickerProps={{todayButton: 'Today'}}     
+                  dayPickerProps={{todayButton: 'Today'}}   
             />
             </div>
+            </FormGroup>
 
 
             <FormGroup controlId="formControlsRadio">
