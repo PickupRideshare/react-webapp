@@ -4,7 +4,7 @@ import 'firebase/firestore';
 import './css/index.css';
 import { Switch, Route, Link } from 'react-router-dom'
 
-class SignupPage extends Component{
+class SigninPage extends Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -138,6 +138,6 @@ render(){
 
 
 }
-export default SignupPage;
+export default SigninPage;
 
 
