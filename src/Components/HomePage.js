@@ -80,7 +80,7 @@ class Homepage extends Component {
 
             <li>
             <a >
-           <Link to="/signup"> Sign up </Link>
+           <Link to="/signup"> Sign Up </Link>
             </a>
             </li>
 
@@ -98,7 +98,8 @@ class Homepage extends Component {
             </nav>
             
 
-
+            <br /><br /><br /><br /><br /><br /><br /><br /> <br />
+            
             <div class="navbar-placeholder">
             <div id="content">
             <div class="mtl mbl lead">
@@ -107,7 +108,7 @@ class Homepage extends Component {
             alt="PickUp Banner"
             id="banner"
             src={require("./img/pickupwebbanner.png")}
-            />
+             />
             </div>
             
             </div>
