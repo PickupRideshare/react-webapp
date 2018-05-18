@@ -125,8 +125,8 @@ class Homepage extends Component {
             <Link to='/'>Contact Us</Link>
             </li>
 
-            <li>         
-            <Link to="/signup"> Sign up </Link>
+            <li>
+           <Link to="/signup"> Sign Up </Link>
             </li>
 
             <li>
@@ -150,7 +150,7 @@ class Homepage extends Component {
             alt="PickUp Banner"
             id="banner"
             src={require("./img/pickupwebbanner.png")}
-            />
+             />
             </div>
             
             </div>
