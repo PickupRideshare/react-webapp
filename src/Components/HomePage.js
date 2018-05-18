@@ -10,6 +10,8 @@ import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
+import TweenLite from 'gsap';
+import scrollTo from 'gsap/ScrollToPlugin';
 
 /*import assets here*/
 
@@ -37,6 +39,7 @@ class Homepage extends Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleDayChange = this.handleDayChange.bind(this);
+    this.scrollTop = this.scrollTop.bind(this);
 	}
 	
 	componentDidMount() {
@@ -77,70 +80,25 @@ class Homepage extends Component {
     });
   }
 
+  scrollTop() {
+    TweenLite.to(window, .8, {scrollTo: '#second'});
+  }
+
 	render() {
 		return(
-			/*<Navbar collapseOnSelect={true}>
-        <Navbar.Header className="text-center">
-          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsStyle="primary" bsSize="small">Contact Us</Button>
+      <div className="App">
+
+<Navbar collapseOnSelect={true}>
+        <Navbar.Header className="">
+          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
         {!this.state.isLoggedIn &&
           <div>
-              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsStyle="primary" bsSize="small">SIGN IN</Button>
+              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
               <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}} onClick={this.openSignUp}>SIGN UP</Button>
           </div>
         }
         </Navbar.Header>
       </Navbar>
-      */
-      <div className="App">
-
-        <nav
-            className="navbar navbar-fixed-top
-            navbar-default"
-            role="navigation"
-            >
-            
-            <div className="container">
-
-
-            <div className="navbar-header">
-            <button
-            type="button"
-            className="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar_collapse">
-            </button>
-            </div>
-
-
-            <div
-            className="collapse navbar-collapse"
-            id="navbar_collapse">
-            <ul className="nav navbar-nav navbar-right">
-            
-            
-            
-      
-        
-            <li>
-            <Link to='/'>Contact Us</Link>
-            </li>
-
-
-            <li>         
-            <Link to="/signup"> Sign up </Link>
-            </li>
-
-            <li>
-            <Link to="/login" > Log In </Link>
-            </li>
-            
-           
-            
-            </ul>
-            </div>
-            </div>
-            </nav>
-            
 
             <div className="navbar-placeholder">
             <div id="content">
@@ -364,7 +322,7 @@ class Homepage extends Component {
             <Button type="submit" bsStyle="primary">Submit</Button>
             </Form>
 
-            <div className="feature-block text-center">
+            <div className="feature-block text-center" id="second">
             <div className="container">
             <h2 className="feature-header">
             Contact Us:
