@@ -3,6 +3,8 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 import './css/index.css';
 import { Switch, Route, Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap';
+import SignupConfirmation from './SignupConfirmation.js';
 
 class SigninPage extends Component{
   constructor(props) {
@@ -11,11 +13,13 @@ class SigninPage extends Component{
       email: '',
       password: '',
       passwordConfirm: '',
+      showConfirmation: false,
     }
 
     this.render = this.render.bind(this);
     this.onChange = this.onChange.bind(this);
     this.createAccount = this.createAccount.bind(this);
+    this.closeConfirmation = this.closeConfirmation.bind(this);
 
 
   }
@@ -29,9 +33,18 @@ class SigninPage extends Component{
   }
 
   createAccount() {
-    if(this.state.password === this.state.passwordConfirm) {
+    /*if(this.state.password === this.state.passwordConfirm) {
       this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
-    }
+    }*/
+    this.setState({
+      showConfirmation: true,
+    });
+  }
+
+  closeConfirmation() {
+    this.setState({
+        showConfirmation: false,
+    });
   }
 
 render(){
@@ -69,9 +82,7 @@ render(){
       
         
             <li>
-            <a >
             <Link to="/">Go Home</Link>
-            </a>
             </li>
 
 
@@ -112,14 +123,14 @@ render(){
                 
                 
           
-            <button onClick={this.createAccount}>Create Account</button>
+            <Button onClick={this.createAccount}>Create Account</Button>
             
             
             
             <br /><br /><br />
             
             <h2 className="feature-header">
-                Thank You for signing up. We appreciate your business.
+                Thank you for signing up. We appreciate your business.
             </h2>
             
             </center>
@@ -128,6 +139,12 @@ render(){
             </div>
         </div>
 
+        <SignupConfirmation
+          show={this.state.showConfirmation}
+          onHide={this.closeConfirmation}
+          className="text-center"
+          style={{color:'#000'}}
+        />
       
       </div>
 

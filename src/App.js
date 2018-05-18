@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 import HomePage from './Components/HomePage';
 import LoginPage from './Components/LoginPage';
-import SigninPage from './Components/SigninPage';
+import SignupPage from './Components/SignupPage';
 import RideDriveForm from './Components/RideDriveForm';
 import logo from './logo.svg';
 import './App.css';
@@ -25,7 +25,7 @@ class App extends Component {
       <div>
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={LoginPage} />
-        <Route path="/signup" component={SigninPage} />
+        <Route path="/signup" component={SignupPage} />
 
         </div>
       </BrowserRouter>
