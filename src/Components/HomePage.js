@@ -88,7 +88,7 @@ class Homepage extends Component {
 		return(
       <div className="App">
 
-<Navbar collapseOnSelect={true}>
+      <Navbar collapseOnSelect={true}>
         <Navbar.Header className="">
           <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
         {!this.state.isLoggedIn &&
@@ -99,6 +99,55 @@ class Homepage extends Component {
         }
         </Navbar.Header>
       </Navbar>
+      {/*
+         <nav
+            className="navbar navbar-fixed-top
+            navbar-default"
+            role="navigation"
+            >
+            
+            <div className="container">
+
+
+            <div className="navbar-header">
+            <button
+            type="button"
+            className="navbar-toggle collapsed"
+            data-toggle="collapse"
+            data-target="#navbar_collapse">
+            </button>
+            </div>
+
+
+            <div
+            className="collapse navbar-collapse"
+            id="navbar_collapse">
+            <ul className="nav navbar-nav navbar-right">
+            
+            
+            
+      
+        
+            <li>
+            <Link to='/'>Contact Us</Link>
+            </li>
+
+
+            <li>         
+            <Link to="/signup"> Sign up </Link>
+            </li>
+
+            <li>
+            <Link to="/login" > Log In </Link>
+            </li>
+            
+           
+            
+            </ul>
+            </div>
+            </div>
+            </nav>
+      */}
 
             <div className="navbar-placeholder">
             <div id="content">
