@@ -79,15 +79,11 @@ class Homepage extends Component {
             </li>
 
             <li>
-            <a >
            <Link to="/signup"> Sign Up </Link>
-            </a>
             </li>
 
             <li>
-            <a >
             <Link to="/login" > Log In </Link>
-            </ a>
             </li>
             
            
@@ -98,9 +94,7 @@ class Homepage extends Component {
             </nav>
             
 
-            <br /><br /><br /><br /><br /><br /><br /><br /> <br />
-            
-            <div class="navbar-placeholder">
+      
             <div id="content">
             <div class="mtl mbl lead">
             <div class="animation-container">
