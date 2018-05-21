@@ -123,7 +123,7 @@ class LoginPage extends Component{
           <br /><br /><br />
           
           <h2 className="feature-header">
-              Thank You for signing up. We appreciate your business.
+              Thank you for signing up. We appreciate your business.
           </h2>
           
           </center>
