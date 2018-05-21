@@ -8,8 +8,8 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import 'react-day-picker/lib/style.css';
+// import DayPickerInput from 'react-day-picker/DayPickerInput';
+// import 'react-day-picker/lib/style.css';
 
 /*import assets here*/
 
@@ -342,10 +342,10 @@ class Homepage extends Component {
             {this.state.selectedDay && <p>Day: {this.state.selectedDay.toLocaleDateString()}</p>}
             {!this.state.selectedDay && <p>Choose a day</p>}
             <div className='black-text'>
-            <DayPickerInput 
+            {/* <DayPickerInput 
                   onDayChange={this.handleDayChange}
                   dayPickerProps={{todayButton: 'Today'}}   
-            />
+            /> */}
             </div>
             </div>
             </FormGroup>
