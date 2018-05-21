@@ -89,7 +89,8 @@ class Homepage extends Component {
       <div className="App">
 
       <Navbar collapseOnSelect={true}>
-        <Navbar.Header className="">
+        <Navbar.Header className="navbar navbar-fixed-top
+            navbar-default">
           <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
         {!this.state.isLoggedIn &&
           <div>
