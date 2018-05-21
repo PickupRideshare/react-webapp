@@ -140,7 +140,7 @@ class Homepage extends Component {
             </div>
             </div>
             </nav>
-            
+        <br /> <br /> 
 
             <div className="navbar-placeholder">
             <div id="content">
