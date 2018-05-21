@@ -100,14 +100,14 @@ class LoginPage extends Component{
           <input type="text" name="Username" /><br /><br /> */}
               
           Email:<br />
-          <input type="text" name="email" value={this.state.email} onChange={this.onChange}/><br /><br />
+          <input type="text" class="inputfield" name="email" value={this.state.email} onChange={this.onChange}/><br /><br />
               
           {/* Phone Number:<br />
           <input type="text" name="Password" /><br /><br />
                */}
               
           Password:<br />
-          <input type="text" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
+          <input type="text" class="inputfield" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
               
           
                       
