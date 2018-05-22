@@ -88,17 +88,17 @@ class Homepage extends Component {
 		return(
       <div className="App">
 
-      <Navbar collapseOnSelect={true}>
+      <Navbar>
         <Navbar.Header className="navbar navbar-fixed-top
             navbar-default">
-          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
+          <Button style={{float: 'right', margin: '15px', marginRight: '30px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>CONTACT US</Button>
         {!this.state.isLoggedIn &&
           <div>
             <Link to="/login" className="no-decoration">
-              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
+              <Button style={{float: 'right', margin: '15px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
             </Link>
             <Link to="/signup" className="no-decoration">
-              <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}}>SIGN UP</Button>
+              <Button bsSize="small" style={{float: 'right', margin: '15px'}}>SIGN UP</Button>
             </Link>  
           </div>
         }
