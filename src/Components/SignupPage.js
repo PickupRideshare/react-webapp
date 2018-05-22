@@ -144,6 +144,8 @@ render(){
           onHide={this.closeConfirmation}
           className="text-center"
           style={{color:'#000'}}
+          title={"Thank you for signing up!"}
+          message={"Welcome to the PickUp family. You are now able to search for rides with your information saved."}
         />
       
       </div>
