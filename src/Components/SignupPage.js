@@ -33,9 +33,9 @@ class SigninPage extends Component{
   }
 
   createAccount() {
-    /*if(this.state.password === this.state.passwordConfirm) {
+    if(this.state.password === this.state.passwordConfirm) {
       this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
-    }*/
+    }
     this.setState({
       showConfirmation: true,
     });
@@ -107,19 +107,19 @@ render(){
             <input type="text" name="Username" /><br /><br /> */}
                 
             Email:<br />
-            <input type="text" name="email" value={this.state.email} onChange={this.onChange} /><br /><br />
+            <input type="text" class="inputfield" name="email" value={this.state.email} onChange={this.onChange} /><br /><br />
 {/*                 
             Phone Number:<br />
             <input type="text" name="Password" /><br /><br /> */}
                 
                 
             Password:<br />
-            <input type="text" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
+            <input type="text" class="inputfield" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
                 
             
                         
             Confirm Password:<br />
-            <input type="text" name="passwordConfirm" value={this.state.passwordConfirm} onChange={this.onChange}/><br /><br />
+            <input type="text" class="inputfield" name="passwordConfirm" value={this.state.passwordConfirm} onChange={this.onChange}/><br /><br />
                 
                 
           
