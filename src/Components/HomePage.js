@@ -8,8 +8,10 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
-// import DayPickerInput from 'react-day-picker/DayPickerInput';
-// import 'react-day-picker/lib/style.css';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
+import TweenLite from 'gsap';
+import scrollTo from 'gsap/ScrollToPlugin';
 
 /*import assets here*/
 
@@ -37,6 +39,7 @@ class Homepage extends Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleDayChange = this.handleDayChange.bind(this);
+    this.scrollTop = this.scrollTop.bind(this);
 	}
 	
 	componentDidMount() {
@@ -77,23 +80,28 @@ class Homepage extends Component {
     });
   }
 
+  scrollTop() {
+    TweenLite.to(window, .8, {scrollTo: '#second'});
+  }
+
 	render() {
 		return(
-			/*<Navbar collapseOnSelect={true}>
-        <Navbar.Header className="text-center">
-          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsStyle="primary" bsSize="small">Contact Us</Button>
+      <div className="App">
+
+      <Navbar collapseOnSelect={true}>
+        <Navbar.Header className="navbar navbar-fixed-top
+            navbar-default">
+          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
         {!this.state.isLoggedIn &&
           <div>
-              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsStyle="primary" bsSize="small">SIGN IN</Button>
+              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
               <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}} onClick={this.openSignUp}>SIGN UP</Button>
           </div>
         }
         </Navbar.Header>
       </Navbar>
-      */
-      <div className="App">
-
-        <nav
+      {/*
+         <nav
             className="navbar navbar-fixed-top
             navbar-default"
             role="navigation"
@@ -140,7 +148,7 @@ class Homepage extends Component {
             </div>
             </div>
             </nav>
-        <br /> <br /> 
+      */}
 
             <div className="navbar-placeholder">
             <div id="content">
@@ -342,10 +350,10 @@ class Homepage extends Component {
             {this.state.selectedDay && <p>Day: {this.state.selectedDay.toLocaleDateString()}</p>}
             {!this.state.selectedDay && <p>Choose a day</p>}
             <div className='black-text'>
-            {/* <DayPickerInput 
+            <DayPickerInput 
                   onDayChange={this.handleDayChange}
                   dayPickerProps={{todayButton: 'Today'}}   
-            /> */}
+            />
             </div>
             </div>
             </FormGroup>
@@ -364,7 +372,7 @@ class Homepage extends Component {
             <Button type="submit" bsStyle="primary">Submit</Button>
             </Form>
 
-            <div className="feature-block text-center">
+            <div className="feature-block text-center" id="second">
             <div className="container">
             <h2 className="feature-header">
             Contact Us:
