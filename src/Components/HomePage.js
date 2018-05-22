@@ -94,8 +94,12 @@ class Homepage extends Component {
           <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
         {!this.state.isLoggedIn &&
           <div>
+            <Link to="/login" className="no-decoration">
               <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
-              <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}} onClick={this.openSignUp}>SIGN UP</Button>
+            </Link>
+            <Link to="/signup" className="no-decoration">
+              <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}}>SIGN UP</Button>
+            </Link>  
           </div>
         }
         </Navbar.Header>
