@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { HelpBlock, Modal } from 'react-bootstrap';
+import { Switch, Route, Link } from 'react-router-dom';
 import modal from './img/pickupwebbanner.png';
 import './css/index.css';
 
@@ -15,14 +16,14 @@ class SignupConfirmation extends Component {
   	return (
       <Modal {...this.props}>
       	<Modal.Header closeButton>
-					<Modal.Title>Thank you for signing up!</Modal.Title>
+					<Modal.Title>{this.props.title}</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 				  <img src={modal} alt='PickUp' style={{height:'100px'}}/>
-				  <p className='mts'>Welcome to the PickUp family! You are now able to search for rides with your information saved.</p>
+				  <p className='mts'>{this.props.message}</p>
 				</Modal.Body>
 				<Modal.Footer>
-					<HelpBlock><small>Have a question? <a href="/contact-us" target="_blank">Contact us</a>!</small></HelpBlock>
+					<HelpBlock><small>Have a question? <Link to="/">Contact us</Link>!</small></HelpBlock>
 				</Modal.Footer>
 			</Modal>
     )
