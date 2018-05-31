@@ -198,12 +198,14 @@ class Homepage extends Component {
             <p>
             </p>
             <div className="learn-more-button-wrapper mtm">
-            <a
-            className="btn btn-default btn-bordered"
-            target="_blank"
-            >
-            Sign up to become a driver
-            </a>
+            <Link to="/signup">
+              <Button
+              className="btn btn-default btn-bordered"
+              target="_blank"
+              >
+              Sign up to become a driver
+              </Button>
+            </Link>
             </div>
             </div>
             <div className="col-md-5 col-md-pull-3 mts text-center">
