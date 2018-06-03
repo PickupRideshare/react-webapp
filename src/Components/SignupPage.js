@@ -3,7 +3,7 @@ import firebase from 'firebase';
 import 'firebase/firestore';
 import './css/index.css';
 import { Switch, Route, Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
+import { Button, Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import SignupConfirmation from './SignupConfirmation.js';
 
 class SigninPage extends Component{
@@ -53,44 +53,14 @@ render(){
     <div className="App">
 
 
-  <nav
-            class="navbar navbar-fixed-top
-            navbar-default"
-            role="navigation"
-            >
-            
-            <div class="container">
-
-
-            <div class="navbar-header">
-            <button
-            type="button"
-            class="navbar-toggle collapsed"
-            data-toggle="collapse"
-            data-target="#navbar_collapse">
-            </button>
-            </div>
-
-
-            <div
-            class="collapse navbar-collapse"
-            id="navbar_collapse">
-            <ul class="nav navbar-nav navbar-right">
-            
-            
-            
-      
-        
-            <li>
-            <Link to="/">Go Home</Link>
-            </li>
-
-
-            </ul>
-            </div>
-            </div>
-            </nav>
-            
+      <Navbar>
+        <Navbar.Header className="navbar navbar-fixed-top
+            navbar-default">
+            <Link to="/" className="no-decoration">
+              <Button bsSize="small" style={{float: 'right', margin: '15px', marginRight: '30px'}}>GO HOME</Button>
+            </Link> 
+        </Navbar.Header>
+      </Navbar>
 
   
       <div className="feature-block black-bg">
@@ -144,6 +114,8 @@ render(){
           onHide={this.closeConfirmation}
           className="text-center"
           style={{color:'#000'}}
+          title={"Thank you for signing up!"}
+          message={"Welcome to the PickUp family. You are now able to search for rides with your information saved."}
         />
       
       </div>

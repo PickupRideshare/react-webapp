@@ -91,14 +91,14 @@ class Homepage extends Component {
       <Navbar collapseOnSelect={true}>
         <Navbar.Header className="navbar navbar-fixed-top
             navbar-default">
-          <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>Contact Us</Button>
+          <Button style={{float: 'right', margin: '12px', marginRight: '20px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>CONTACT US</Button>
         {!this.state.isLoggedIn &&
           <div>
             <Link to="/login" className="no-decoration">
-              <Button style={{float: 'right', margin: '10px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
+              <Button style={{float: 'right', margin: '12px', verticalAlign: 'top'}} bsSize="small">SIGN IN</Button>
             </Link>
             <Link to="/signup" className="no-decoration">
-              <Button bsSize="small" style={{float: 'right', margin: '5px', marginTop: '10px'}}>SIGN UP</Button>
+              <Button bsSize="small" style={{float: 'right', margin: '12px', verticalAlign: 'top'}}>SIGN UP</Button>
             </Link>  
           </div>
         }
@@ -198,12 +198,14 @@ class Homepage extends Component {
             <p>
             </p>
             <div className="learn-more-button-wrapper mtm">
-            <a
-            className="btn btn-default btn-bordered"
-            target="_blank"
-            >
-            Sign up to become a driver
-            </a>
+            <Link to="/signup">
+              <Button
+              className="btn btn-default btn-bordered"
+              target="_blank"
+              >
+              Sign up to become a driver
+              </Button>
+            </Link>
             </div>
             </div>
             <div className="col-md-5 col-md-pull-3 mts text-center">
