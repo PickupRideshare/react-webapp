@@ -78,7 +78,7 @@ class LoginPage extends Component{
                */}
               
           Password:<br />
-          <input type="text" class="inputfield" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
+          <input type="password" class="inputfield" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
               
           
                       
