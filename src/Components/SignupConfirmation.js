@@ -23,7 +23,7 @@ class SignupConfirmation extends Component {
 				  <p className='mts'>{this.props.message}</p>
 				</Modal.Body>
 				<Modal.Footer>
-					<HelpBlock><small>Have a question? <Link to="/">Contact us</Link>!</small></HelpBlock>
+					<HelpBlock><small>Have a question? <Link to='/' onClick={this.props.click}>Contact us</Link>!</small></HelpBlock>
 				</Modal.Footer>
 			</Modal>
     )

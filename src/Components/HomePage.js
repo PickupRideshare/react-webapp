@@ -3,7 +3,7 @@
 */
 import React, { Component, PropTypes } from 'react';
 import { browserHistory} from 'react-router';
-import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Form, FormGroup, FormControl, ControlLabel, Radio, HelpBlock, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdown, Navbar, Form, FormGroup, FormControl, ControlLabel, Radio, HelpBlock, Glyphicon, Modal } from 'react-bootstrap';
 import { Switch, Route, Link } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import LoginPage from './LoginPage';
@@ -12,6 +12,8 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import TweenLite from 'gsap';
 import scrollTo from 'gsap/ScrollToPlugin';
+import SignupConfirmation from './SignupConfirmation.js';
+
 
 /*import assets here*/
 
@@ -31,6 +33,8 @@ class Homepage extends Component {
 			emailValid: null,
 			phoneValid: null,
       selectedDay: undefined,
+      showPopup: null,
+      showForget: null,
 		}
 
 		/*this.myFunction = this.myFunction.bind(this);*/
@@ -40,10 +44,14 @@ class Homepage extends Component {
     this.handlePhoneChange = this.handlePhoneChange.bind(this);
     this.handleDayChange = this.handleDayChange.bind(this);
     this.scrollTop = this.scrollTop.bind(this);
+    this.closeConfirmation = this.closeConfirmation.bind(this);
 	}
 	
 	componentDidMount() {
-	console.log("component mounted");	
+	  console.log("component mounted");	
+    this.setState({
+      showPopup: true,
+    });
 	}
 
   handleFirstnameChange(e) {
@@ -82,6 +90,16 @@ class Homepage extends Component {
 
   scrollTop() {
     TweenLite.to(window, .8, {scrollTo: '#second'});
+    this.setState({
+      showPopup: false,
+    });
+  }
+
+  closeConfirmation() {
+    this.setState({
+      showPopup: false,
+      showForget: true,
+    });
   }
 
 	render() {
@@ -403,7 +421,16 @@ class Homepage extends Component {
             </div>
             </div>
             </div>
-         
+
+         <SignupConfirmation
+          show={this.state.showPopup && !this.state.showForget}
+          onHide={this.closeConfirmation}
+          className="text-center"
+          style={{color:'#000'}}
+          title={"New to the site? Click on the top right to sign up!"}
+          message={"Signing up is a great way to start driving with pickup and optimizing your commute."}
+          click={this.scrollTop}
+        />
 
 
 
