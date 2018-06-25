@@ -33,8 +33,7 @@ class Homepage extends Component {
 			emailValid: null,
 			phoneValid: null,
       selectedDay: undefined,
-      showPopup: null,
-      showForget: null,
+      modalVisible: null,
 		}
 
 		/*this.myFunction = this.myFunction.bind(this);*/
@@ -45,14 +44,27 @@ class Homepage extends Component {
     this.handleDayChange = this.handleDayChange.bind(this);
     this.scrollTop = this.scrollTop.bind(this);
     this.closeConfirmation = this.closeConfirmation.bind(this);
+    this.openModal = this.openModal.bind(this);
 	}
 	
 	componentDidMount() {
-	  console.log("component mounted");	
-    this.setState({
-      showPopup: true,
-    });
-	}
+	  console.log("component mounted");
+    if (window.sessionStorage.getItem("sessionkey")) {
+      console.log("already opened modal");
+    } else {
+      this.openModal();
+    }
+  }
+
+  openModal() {
+    window.sessionStorage.setItem("sessionkey", true );
+    console.log("sessionkey set");
+    setTimeout(function() {
+      this.setState({
+        modalVisible: true,
+      })
+    }.bind(this), 3000);
+  }
 
   handleFirstnameChange(e) {
     this.setState({
@@ -91,14 +103,13 @@ class Homepage extends Component {
   scrollTop() {
     TweenLite.to(window, .8, {scrollTo: '#second'});
     this.setState({
-      showPopup: false,
+      modalVisible: false,
     });
   }
 
   closeConfirmation() {
     this.setState({
-      showPopup: false,
-      showForget: true,
+      modalVisible: false,
     });
   }
 
@@ -423,7 +434,7 @@ class Homepage extends Component {
             </div>
 
          <SignupConfirmation
-          show={this.state.showPopup && !this.state.showForget}
+          show={this.state.modalVisible}
           onHide={this.closeConfirmation}
           className="text-center"
           style={{color:'#000'}}
