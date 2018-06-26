@@ -12,7 +12,9 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import TweenLite from 'gsap';
 import scrollTo from 'gsap/ScrollToPlugin';
-
+import SignupConfirmation from './SignupConfirmation.js';
+import ReactDom from 'react-dom';
+import Popup from 'reactjs-popup';
 /*import assets here*/
 
 
@@ -66,6 +68,7 @@ class Homepage extends Component {
       error: null,
     });
   }
+    
 
   handlePhoneChange(e) {
     this.setState({
@@ -91,7 +94,7 @@ class Homepage extends Component {
       <Navbar collapseOnSelect={true}>
         <Navbar.Header className="navbar navbar-fixed-top
             navbar-default">
-          <Button style={{float: 'right', margin: '12px', marginRight: '20px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>CONTACT US</Button>
+     <Button style={{float: 'right', margin: '12px', marginRight: '20px', verticalAlign: 'top'}} bsSize="small" onClick={this.scrollTop}>CONTACT US</Button>
         {!this.state.isLoggedIn &&
           <div>
             <Link to="/login" className="no-decoration">
@@ -102,6 +105,7 @@ class Homepage extends Component {
             </Link>  
           </div>
         }
+            
         </Navbar.Header>
       </Navbar>
       {/*
@@ -174,6 +178,7 @@ class Homepage extends Component {
             <div className="col-md-10 col-md-offset-1">
 
 
+
             <h2 className="feature-header">
             <br /><br />
 
@@ -216,6 +221,11 @@ class Homepage extends Component {
             <br />
             <br />
             <iframe src='//www.appdemostore.com/embed?id=4676514231615488' width='334' height='680' frameborder='0'></iframe>
+            
+            
+            
+
+            
             </div>
             </div>
             </div>
@@ -227,156 +237,14 @@ class Homepage extends Component {
             <div className="row text-center">
             <div className="col-md-8 col-md-offset-2">
             <h2 className="feature-header mtl">
-            Get A Ride Today <br /> Please Fill Out The Following Form And Select Rider Or Driver<br />
-            <br />
-            Info:
+            
             </h2>
             </div>
             </div>
             
             <div className="text-center">
 
-            <Form horizontal>
-            <FormGroup controlId="firstnameField">
-            <Col componentClass={ControlLabel} sm={4}>
-            First name:
-            </Col>
-            <Col sm={5}>
-              <FormControl
-                type="text"
-                placeholder="First name"
-                onChange={this.handleFirstnameChange}
-                value={this.state.firstname}
-              />
-            </Col>
-              <FormControl.Feedback />
-            </FormGroup>
-
-            <FormGroup controlId="lastnameField">
-             <Col componentClass={ControlLabel} sm={4}>
-             Last name:
-             </Col>
-             <Col sm={5}>
-              <FormControl
-                type="text"
-                placeholder="Last name"
-                onChange={this.handleLastnameChange}
-                value={this.state.lastname}
-              />
-              </Col>
-              <FormControl.Feedback />
-            </FormGroup>
-
-
-
-           <FormGroup controlId="emailField">
-            <Col componentClass={ControlLabel} sm={4}>
-            Email address:
-            </Col>
-            <Col sm={5}>
-              <FormControl
-                type="text"
-                placeholder="name@example.com"
-                onChange={this.handleEmailChange}
-                value={this.state.email}
-              />
-            </Col>
-              <FormControl.Feedback />
-            </FormGroup>
-
-            <FormGroup controlId="phoneField">
-            <Col componentClass={ControlLabel} sm={4}>
-            Phone number:
-            </Col>
-            <Col sm={5}>
-              <FormControl
-                type="text"
-                onChange={this.handlePhoneChange}
-                value={this.state.phone}
-              />
-            </Col>
-              <FormControl.Feedback />
-            </FormGroup>
-
-
-            <FormGroup controlId="formControlsSelect">
-              <Col componentClass={ControlLabel} sm={4}>
-                Starting from:
-              </Col>
-              <Col sm={5}>
-              <FormControl componentClass="select">
-                  <option value="McMaster University">McMaster University</option>
-                  <option value="Richmond Hill">Richmond Hill</option>
-                  <option value="Oakville">Oakville</option>
-                  <option value="Square One">Square One</option>
-                  <option value="North York">North York</option>
-                  <option value="Georgetown">Georgetown</option>
-                  <option value="Milton">Milton</option>
-                  <option value="Markham">Markham</option>
-                  <option value="Scarborough">Scarborough</option>
-                  <option value="Thornhill">Thornhill</option>
-                  <option value="Etobicoke">Etobicoke</option>
-                  <option value="Toronto">Toronto (DT)</option>
-                  <option value="St. Catharines">St. Catharines</option>
-                  <option value="London">London</option>
-                  <option value="Kitchener">Kitchener</option>
-              </FormControl>
-              </Col>
-            </FormGroup>
-        
-            
-
-            <FormGroup controlId="formControlsSelect">
-              <Col componentClass={ControlLabel} sm={4}>
-                Destination:
-              </Col>
-              <Col sm={5}>
-              <FormControl componentClass="select">
-                <option value="McMaster University">McMaster University</option>
-                  <option value="Richmond Hill">Richmond Hill</option>
-                  <option value="Oakville">Oakville</option>
-                  <option value="Square One">Square One</option>
-                  <option value="North York">North York</option>
-                  <option value="Georgetown">Georgetown</option>
-                  <option value="Milton">Milton</option>
-                  <option value="Markham">Markham</option>
-                  <option value="Scarborough">Scarborough</option>
-                  <option value="Thornhill">Thornhill</option>
-                  <option value="Etobicoke">Etobicoke</option>
-                  <option value="Toronto">Toronto (DT)</option>
-                  <option value="St. Catharines">St. Catharines</option>
-                  <option value="London">London</option>
-                  <option value="Kitchener">Kitchener</option>
-              </FormControl>
-              </Col>
-            </FormGroup>
-
-            <FormGroup controlId="formControlsInput">
-            <div>
-            {this.state.selectedDay && <p>Day: {this.state.selectedDay.toLocaleDateString()}</p>}
-            {!this.state.selectedDay && <p>Choose a day</p>}
-            <div className='black-text'>
-            <DayPickerInput 
-                  onDayChange={this.handleDayChange}
-                  dayPickerProps={{todayButton: 'Today'}}   
-            />
-            </div>
-            </div>
-            </FormGroup>
-
-
-            <FormGroup controlId="formControlsRadio">
-              <Radio name="radioGroup">
-              I am a rider
-              </Radio>
-              <Radio name="radioGroup">
-              I am a driver
-              </Radio>
-            </FormGroup>
-
            
-            <Button type="submit" bsStyle="primary">Submit</Button>
-            </Form>
 
             <div className="feature-block text-center" id="second">
             <div className="container">
@@ -403,6 +271,7 @@ class Homepage extends Component {
             </div>
             </div>
             </div>
+ 
          
 
 
