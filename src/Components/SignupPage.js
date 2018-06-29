@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import firebase from 'firebase';
-import 'firebase/firestore';
 import './css/index.css';
 import { Switch, Route, Link } from 'react-router-dom'
 import { Button, Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import SignupConfirmation from './SignupConfirmation.js';
+import firebase from '../fire'
 
 class SigninPage extends Component{
   constructor(props) {
@@ -34,7 +33,7 @@ class SigninPage extends Component{
 
   createAccount() {
     if(this.state.password === this.state.passwordConfirm) {
-      this.props.firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
+      firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
     }
     this.setState({
       showConfirmation: true,
