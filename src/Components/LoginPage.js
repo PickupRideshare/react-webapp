@@ -1,4 +1,3 @@
-import firebase from 'firebase';
 import './css/index.css';
 import React, { Component, PropTypes } from 'react';
 import { browserHistory} from 'react-router';
@@ -6,7 +5,7 @@ import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdo
 import { Switch, Route,  Link  } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import SignupPage from './SignupPage';
-
+import firebase from '../fire'
 
 class LoginPage extends Component{
   constructor(props) {
@@ -33,7 +32,7 @@ class LoginPage extends Component{
   onSubmit() {
     console.log(this.state.email);
     console.log(this.state.password);
-    this.props.firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
+    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
         console.log(e);
     }).then(() => {
       console.log("Signed in!");
