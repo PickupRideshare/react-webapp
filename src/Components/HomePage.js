@@ -14,7 +14,7 @@ import TweenLite from 'gsap';
 import scrollTo from 'gsap/ScrollToPlugin';
 import SignupConfirmation from './SignupConfirmation.js';
 import ReactDom from 'react-dom';
-import Popup from 'reactjs-popup';
+
 /*import assets here*/
 
 
