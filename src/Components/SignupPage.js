@@ -83,12 +83,12 @@ render(){
                 
                 
             Password:<br />
-            <input type="text" class="inputfield" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
+            <input type="password" class="inputfield" name="password" value={this.state.password} onChange={this.onChange} /><br /><br />
                 
             
                         
             Confirm Password:<br />
-            <input type="text" class="inputfield" name="passwordConfirm" value={this.state.passwordConfirm} onChange={this.onChange}/><br /><br />
+            <input type="password" class="inputfield" name="passwordConfirm" value={this.state.passwordConfirm} onChange={this.onChange}/><br /><br />
                 
                 
           
