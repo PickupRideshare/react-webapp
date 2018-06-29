@@ -1,0 +1,249 @@
+[debug] [2018-06-29T01:52:35.193Z] ----------------------------------------------------------------------
+[debug] [2018-06-29T01:52:35.196Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-29T01:52:35.196Z] CLI Version:   3.18.6
+[debug] [2018-06-29T01:52:35.196Z] Platform:      darwin
+[debug] [2018-06-29T01:52:35.196Z] Node Version:  v8.11.2
+[debug] [2018-06-29T01:52:35.197Z] Time:          Thu Jun 28 2018 21:52:35 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:35.197Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-29T01:52:35.227Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-29T01:52:35.228Z] > authorizing via signed-in user
+[debug] [2018-06-29T01:52:35.229Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-29T01:52:35.230Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/zoYmVCEJW2lCVKVblpjmFdEKF47O9G7XLCc8EDo1slY',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Jun 28 2018 21:52:35 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:35.900Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T01:52:35.921Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 21:52:35 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:36.482Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T01:52:36.482Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pickup-34815/tokens  
+  
+ Thu Jun 28 2018 21:52:36 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:36.871Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T01:52:36.872Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 21:52:36 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:37.264Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/aravinsivakumar/Documents/GitHub/react-webapp'...
+[info] 
+[warn] ⚠  functions: Cannot start emulator. Error: EACCES: permission denied, open '/Users/aravinsivakumar/.config/configstore/@google-cloud/functions-emulator/.active-server.json'
+You don't have access to this file.
+
+[debug] [2018-06-29T01:52:38.396Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:52:38 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:39.159Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-06-29T01:52:39.177Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:52:39 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:39.835Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5004 is not available. Trying another port...
+[debug] [2018-06-29T01:52:39.838Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:52:39 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:40.475Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5008 is not available. Trying another port...
+[debug] [2018-06-29T01:52:40.478Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:52:40 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:40.740Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5012 is not available. Trying another port...
+[debug] [2018-06-29T01:52:40.744Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:52:40 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:40.993Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5016 is not available. Trying another port...
+[debug] [2018-06-29T01:52:40.998Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:52:40 GMT-0400 (EDT)
+[debug] [2018-06-29T01:52:41.278Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5020
+
+[debug] [2018-06-29T01:53:56.248Z] ----------------------------------------------------------------------
+[debug] [2018-06-29T01:53:56.250Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-29T01:53:56.250Z] CLI Version:   3.18.6
+[debug] [2018-06-29T01:53:56.250Z] Platform:      darwin
+[debug] [2018-06-29T01:53:56.250Z] Node Version:  v8.11.2
+[debug] [2018-06-29T01:53:56.251Z] Time:          Thu Jun 28 2018 21:53:56 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:56.251Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-29T01:53:56.262Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-29T01:53:56.262Z] > authorizing via signed-in user
+[debug] [2018-06-29T01:53:56.264Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 21:53:56 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:57.008Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T01:53:57.009Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pickup-34815/tokens  
+  
+ Thu Jun 28 2018 21:53:57 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:57.448Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T01:53:57.449Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 21:53:57 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:57.933Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/aravinsivakumar/Documents/GitHub/react-webapp'...
+[info] 
+[warn] ⚠  functions: Cannot start emulator. Error: EACCES: permission denied, open '/Users/aravinsivakumar/.config/configstore/@google-cloud/functions-emulator/.active-server.json'
+You don't have access to this file.
+
+[debug] [2018-06-29T01:53:58.868Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:53:58 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:59.169Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-06-29T01:53:59.191Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:53:59 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:59.460Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5004 is not available. Trying another port...
+[debug] [2018-06-29T01:53:59.463Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:53:59 GMT-0400 (EDT)
+[debug] [2018-06-29T01:53:59.763Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5008 is not available. Trying another port...
+[debug] [2018-06-29T01:53:59.769Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:53:59 GMT-0400 (EDT)
+[debug] [2018-06-29T01:54:00.004Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5012 is not available. Trying another port...
+[debug] [2018-06-29T01:54:00.008Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:54:00 GMT-0400 (EDT)
+[debug] [2018-06-29T01:54:00.289Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5016 is not available. Trying another port...
+[debug] [2018-06-29T01:54:00.294Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 21:54:00 GMT-0400 (EDT)
+[debug] [2018-06-29T01:54:00.583Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5020
+
+[debug] [2018-06-29T02:27:39.436Z] ----------------------------------------------------------------------
+[debug] [2018-06-29T02:27:39.438Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-29T02:27:39.438Z] CLI Version:   3.18.6
+[debug] [2018-06-29T02:27:39.438Z] Platform:      darwin
+[debug] [2018-06-29T02:27:39.438Z] Node Version:  v8.11.2
+[debug] [2018-06-29T02:27:39.438Z] Time:          Thu Jun 28 2018 22:27:39 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:39.439Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-29T02:27:39.448Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-29T02:27:39.449Z] > authorizing via signed-in user
+[debug] [2018-06-29T02:27:39.451Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 22:27:39 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:40.322Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T02:27:40.322Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pickup-34815/tokens  
+  
+ Thu Jun 28 2018 22:27:40 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:40.705Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T02:27:40.706Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 22:27:40 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:41.575Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/aravinsivakumar/Documents/GitHub/react-webapp'...
+[info] 
+[warn] ⚠  functions: Cannot start emulator. Error: EACCES: permission denied, open '/Users/aravinsivakumar/.config/configstore/@google-cloud/functions-emulator/.active-server.json'
+You don't have access to this file.
+
+[debug] [2018-06-29T02:27:42.554Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:27:42 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:42.969Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-06-29T02:27:42.994Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:27:42 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:43.195Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5004 is not available. Trying another port...
+[debug] [2018-06-29T02:27:43.199Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:27:43 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:43.466Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5008 is not available. Trying another port...
+[debug] [2018-06-29T02:27:43.469Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:27:43 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:43.691Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5012 is not available. Trying another port...
+[debug] [2018-06-29T02:27:43.694Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:27:43 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:43.910Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5016 is not available. Trying another port...
+[debug] [2018-06-29T02:27:43.914Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:27:43 GMT-0400 (EDT)
+[debug] [2018-06-29T02:27:44.136Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5020
+
+[debug] [2018-06-29T02:33:10.136Z] ----------------------------------------------------------------------
+[debug] [2018-06-29T02:33:10.139Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-06-29T02:33:10.139Z] CLI Version:   3.18.6
+[debug] [2018-06-29T02:33:10.139Z] Platform:      darwin
+[debug] [2018-06-29T02:33:10.139Z] Node Version:  v8.11.2
+[debug] [2018-06-29T02:33:10.140Z] Time:          Thu Jun 28 2018 22:33:10 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:10.140Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-29T02:33:10.151Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-29T02:33:10.151Z] > authorizing via signed-in user
+[debug] [2018-06-29T02:33:10.153Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 22:33:10 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:10.622Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T02:33:10.623Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/pickup-34815/tokens  
+  
+ Thu Jun 28 2018 22:33:10 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:10.946Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-29T02:33:10.947Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pickup-34815  
+  
+ Thu Jun 28 2018 22:33:10 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:11.670Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/aravinsivakumar/Documents/GitHub/react-webapp'...
+[info] 
+[warn] ⚠  functions: Cannot start emulator. Error: EACCES: permission denied, open '/Users/aravinsivakumar/.config/configstore/@google-cloud/functions-emulator/.active-server.json'
+You don't have access to this file.
+
+[debug] [2018-06-29T02:33:12.563Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:33:12 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:12.869Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[debug] [2018-06-29T02:33:12.890Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:33:12 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:13.203Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5004 is not available. Trying another port...
+[debug] [2018-06-29T02:33:13.206Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:33:13 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:14.386Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5008 is not available. Trying another port...
+[debug] [2018-06-29T02:33:14.389Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:33:14 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:14.672Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5012 is not available. Trying another port...
+[debug] [2018-06-29T02:33:14.675Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:33:14 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:14.889Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5016 is not available. Trying another port...
+[debug] [2018-06-29T02:33:14.892Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/521002640638/clients/_:getWebAppConfig  
+  
+ Thu Jun 28 2018 22:33:14 GMT-0400 (EDT)
+[debug] [2018-06-29T02:33:16.056Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] ✔  hosting: Local server: http://localhost:5020
+

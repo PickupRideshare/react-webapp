@@ -4,6 +4,7 @@ import HomePage from './Components/HomePage';
 import LoginPage from './Components/LoginPage';
 import SignupPage from './Components/SignupPage';
 import RideDriveForm from './Components/RideDriveForm';
+import UserDashboard from './Components/dashboard/src/views/Dashboard/Dashboard';
 import logo from './logo.svg';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
@@ -26,6 +27,8 @@ class App extends Component {
         <Route exact path="/" component={HomePage} />
         <Route path="/login" component={LoginPage} />
         <Route path="/signup" component={SignupPage} />
+        <Route path="/dashboard" component={UserDashboard} />
+     
 
         </div>
       </BrowserRouter>

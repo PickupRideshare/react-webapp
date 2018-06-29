@@ -5,6 +5,7 @@ import { Grid, Row, Col, ButtonGroup, Button, Jumbotron, Nav, NavItem, NavDropdo
 import { Switch, Route,  Link  } from 'react-router-dom'
 import { HashRouter } from 'react-router-dom'
 import SignupPage from './SignupPage';
+import UserDashboard from './dashboard/src/views/Dashboard/Dashboard';
 import firebase from '../fire'
 
 class LoginPage extends Component{
@@ -88,8 +89,10 @@ class LoginPage extends Component{
                */}
               
         
-              <Button onClick={this.onSubmit}>Sign in</Button>
-          
+             <Button onClick={this.onSubmit}>Sign in</Button>
+         
+ 
+         
           <p className="error-message">{this.state.errorMessage}</p>
           
           <br /><br /><br />
