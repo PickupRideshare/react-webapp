@@ -13,6 +13,7 @@ class LoginPage extends Component{
     this.state = {
       email: '',
       password: '',
+      errorMessage: ""
     };
 
     this.render = this.render.bind(this);
@@ -34,6 +35,7 @@ class LoginPage extends Component{
     console.log(this.state.password);
     firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch((e)=>{
         console.log(e);
+        this.setState({errorMessage: e.message})
     }).then(() => {
       console.log("Signed in!");
     });
@@ -88,7 +90,7 @@ class LoginPage extends Component{
         
               <Button onClick={this.onSubmit}>Sign in</Button>
           
-          
+          <p className="error-message">{this.state.errorMessage}</p>
           
           <br /><br /><br />
           

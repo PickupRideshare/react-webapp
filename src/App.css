@@ -7,6 +7,10 @@
   height: 80px;
 }
 
+.error-message {
+  color: white,
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
